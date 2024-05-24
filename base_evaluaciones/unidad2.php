@@ -18,8 +18,29 @@
 	</nav>
 	</header>
 	<section>
-		<h2>Eventos</h2>
-	</section>
+		<h2>Calcula cuanto falta</h2>
+				<form action="calculo_fecha.php" method="POST">
+					<label for="clase">Dia:</label>
+					<input type="number" id="dia" name="dia" min="1" max="31" required>
+					<br><br>
+					<label for="clase">Mes:</label>
+					<input type="number" id="mes" name="mes" min="1" max="12" required>
+					<br><br>
+					<label for="clase">Año:</label>
+					<input type="number" id="anio" name="anio" min="1900" max="2100" required>
+					<input type="submit" value="Calcular">
+				</form>
+
+<?php
+			if(isset($_GET['dias'])){
+					echo "<p>Faltan  </p>";
+				}
+
+?>
+
+
+
+			</section>
 	<aside>
     
   </aside>
