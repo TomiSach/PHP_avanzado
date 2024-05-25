@@ -27,21 +27,17 @@
 					<input type="number" id="mes" name="mes" min="1" max="12" required>
 					<br><br>
 					<label for="clase">Año:</label>
-					<input type="number" id="anio" name="anio" min="1900" max="2100" required>
+					<input type="number" id="anio" name="anio" min="0" max="2100" required>
 					<input type="submit" value="Calcular">
 				</form>
-
-<?php
+			</section>
+	<aside>
+	<?php
 			if(isset($_GET['dias'])){
-					echo "<p>Faltan  </p>";
+					echo "<p>Faltan ".$_GET['dias']." dias para el ".$_GET['fecha']." </p>";
 				}
 
 ?>
-
-
-
-			</section>
-	<aside>
     
   </aside>
 	<footer>
