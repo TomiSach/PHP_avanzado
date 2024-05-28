@@ -39,7 +39,7 @@
 			<?php
 
 			if (isset($_GET['ficha_creada'])) {
-				echo "<h2>Comentario guardado</h2>";
+				echo "<h2>Comentario guardado!</h2>";
 			}
 
 
@@ -48,12 +48,16 @@
 
 		</section>
 		<aside>
+			<h1>Comentarios</h1>
 			<?php
 			$nombre = "ejemplo1.txt";
-			if ($archivo = fopen($nombre, "r")) {
+			if (file_exists($nombre)) {
+				$archivo = fopen($nombre, "r");
+				echo '<pre>'; // Mantener el formato de los saltos de línea
 				while (($linea = fgets($archivo)) !== false) {
-					echo $linea;
+					echo htmlspecialchars($linea); // Convierte caracteres especiales para evitar problemas de HTML
 				}
+				echo '</pre>';
 				fclose($archivo);
 			} else {
 				echo "<p>No se encontró el archivo de comentarios.</p>";
