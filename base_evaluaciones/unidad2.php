@@ -33,9 +33,21 @@
 			</section>
 	<aside>
 	<?php
-			if(isset($_GET['dias'])){
-					echo "<p>Faltan ".$_GET['dias']." dias para el ".$_GET['fecha']." </p>";
-				}
+			 if (isset($_GET['ficha_creada'])){
+        $file_path = 'ejemplo1.txt';
+				 
+            $file = fopen($file_path, "r");
+            
+                echo "<h1>Contenido del Archivo:</h1>";
+                echo "<div style='white-space: pre-wrap;'>";
+                
+                // Usar fpassthru para mostrar el contenido del archivo
+                fpassthru($file);
+                
+                echo "</div>";
+                
+                // Cerrar el archivo
+                fclose($file);       
 
 ?>
     
