@@ -34,8 +34,12 @@
 				<input type="submit" value="Enviar">
 			</form>
 
+			<?php
+			if(isset($_GET["ficha_creada"])){
+				echo "<p>Comentario guardado correctamente.</p>";
+			}
 
-
+		?>
 
 		</section>
 		<aside>
