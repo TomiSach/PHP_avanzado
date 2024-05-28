@@ -11,7 +11,10 @@ $contenido = "<h2> Nombre:".$nombre.' Email: '.$mail.' Comentario: '.$comentario
 fputs($archivo,$contenido);
 fclose($archivo);
 
+$file_content = file_get_contents("ejemplo1.txt");
 
-header("Location: unidad3.php?ficha_creada=true");
+$encoded_content = urlencode($file_content);
+
+header("Location: unidad3.php?file_content=$encoded_content&ficha_creada=true");
 
 ?>
