@@ -12,6 +12,6 @@ fputs($archivo,$contenido);
 fclose($archivo);
 
 
-header("Location: unidad3.php?ficha_creada=true");
+header("Location: unidad3.php?ficha_creada");
 
 ?>
