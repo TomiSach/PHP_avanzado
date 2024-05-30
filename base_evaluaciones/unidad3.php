@@ -55,7 +55,7 @@
 				$archivo = fopen($nombre, "r");
 				echo '<pre>'; // Mantener el formato de los saltos de línea
 				while (($linea = fgets($archivo)) !== false) {
-					echo htmlspecialchars($linea); // Convierte caracteres especiales para evitar problemas de HTML
+					echo htmlspecialchars_decode($linea); // Convierte caracteres especiales para evitar problemas de HTML
 				}
 				echo '</pre>';
 				fclose($archivo);
