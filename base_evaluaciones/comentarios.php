@@ -15,7 +15,7 @@ $contenido = "Nombre: " . $nombre . "\n" .
              "Comentario: " . $comentario . "\n" .
              "Fecha comentario: " . $fecha_comentario . "\n".
              "Hora: " . $hora_comentario . "\n".
-             "\n";
+             "<hr />" ."\n";
         
 fputs($archivo, $contenido);
 fclose($archivo);

@@ -41,11 +41,6 @@
 				<?php
 				include("ver_clases.php");
 				?>
-
-
-
-
-
 			</aside>
 			<footer>
 				<a href="https://site.elearning-total.com/courses/?com=lb">Programación en PHP y MySQL - Nivel Avanzado</a>
