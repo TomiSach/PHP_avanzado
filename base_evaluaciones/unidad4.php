@@ -15,29 +15,34 @@
 
 
 			<nav>
-				<?php include("botonera.php"); ?>
+				<?php include ("botonera.php"); ?>
 			</nav>
 		</header>
 		<section>
 			<h2>Imágenes con PHP</h2>
+	
+			<img src="marca_de_agua.php" alt="Marca de agua">
 		</section>
+
 		<aside>
 			<h3> Imagenes que soporta el sitio</h3>
 			<?php
 
-			if(imagetypes() & IMG_GIF){
+			if (imagetypes() & IMG_GIF) {
 				echo "<p>El sitio soporta elementos GIF</p>";
-			}else {
+			} else {
 				echo "<p>El sitio no soporta elementos GIF</p>";
-			} if(imagetypes() & IMG_PNG){
+			}
+			if (imagetypes() & IMG_PNG) {
 				echo "<p>El sitio soporta elementos PNG</p>";
-			}else {
+			} else {
 				echo "<p>El sitio no soporta elementos PNG</p>";
-			} 
+			}
 
 
 			?>
 
+<img src="base_evaluaciones/marca_de_agua.php" alt="Marca de agua">
 
 		</aside>
 		<footer>
