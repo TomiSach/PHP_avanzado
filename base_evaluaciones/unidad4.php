@@ -21,7 +21,8 @@
 		<section>
 			<h2>Imágenes con PHP</h2>
 	
-			<img src="marca_de_agua.php" alt="Marca de agua">
+			<img src="marca_de_agua.php" alt="Marca de agua" style="width: 600px;">
+			
 		</section>
 
 		<aside>

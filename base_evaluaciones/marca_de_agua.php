@@ -1,6 +1,6 @@
 <?php
-$image = 'base_evaluaciones/imagenes/f1.jpg';
-$marca_agua = 'base_evaluaciones/imagenes/marca.png';
+$image = 'imagenes/hoja_blanca.jpg';
+$marca_agua = 'imagenes/marca.png';
 $img = imagecreatefrompng($marca_agua);
 $ext = substr($image, -3);
 $ext = mb_strtolower($ext);
@@ -17,9 +17,14 @@ switch ($ext) {
         break;
 }
 
-imagecopy($img2, $img, (imagesx($img2) / 2), (imagesy($img2) / 2), (imagesx($img) / 2), (imagesy($img) / 2), (imagesx($img) / 2), imagesy($img) );
+$img2_width = imagesx($img2);
+$img2_height = imagesy($img2);
+$img_width = imagesx($img);
+$img_height = imagesy($img);
+imagecopy
+imagecopy($img2, $img, ($img2_width / 2) - ($img_width / 2), ($img2_height / 2) - ($img_height / 2), 0, 0, $img_width, $img_height);
 header('Content-type: image/jpeg');
 imagejpeg($img2);
 imagedestroy($img);
-imagedestroy($im2);
+imagedestroy($img2);
 ?>
