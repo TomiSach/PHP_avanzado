@@ -20,30 +20,24 @@
 		</header>
 		<section>
 			<h2>Imágenes con PHP</h2>
+
+			<strong><h3 style="text-align: center; color:blue;">Marca de agua</h3></strong>
 	
-			<img src="marca_de_agua.php" alt="Marca de agua" style="width: 600px;">
+			<img src="marca_de_agua.php" alt="Marca de agua" style="width: 250px;">
+
+
+			
+
 			
 		</section>
 
 		<aside>
-			<h3> Imagenes que soporta el sitio</h3>
-			<?php
+			<strong><h3 style="text-align: center; color:red;">Thumbnail</h3></strong>
 
-			if (imagetypes() & IMG_GIF) {
-				echo "<p>El sitio soporta elementos GIF</p>";
-			} else {
-				echo "<p>El sitio no soporta elementos GIF</p>";
-			}
-			if (imagetypes() & IMG_PNG) {
-				echo "<p>El sitio soporta elementos PNG</p>";
-			} else {
-				echo "<p>El sitio no soporta elementos PNG</p>";
-			}
+<?php include("thumbnail.php") ?>	
 
+<img src="imagenes/auto_thumb.jpg" alt="Auto" style="display: block; margin: 0 auto">
 
-			?>
-
-<img src="base_evaluaciones/marca_de_agua.php" alt="Marca de agua">
 
 		</aside>
 		<footer>
