@@ -5,6 +5,7 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<link rel="stylesheet" href="estilos.css">
+	<link href="css/lightbox.min.css" rel="stylesheet" type="text/css" />
 </head>
 
 <body>
@@ -15,28 +16,32 @@
 
 
 			<nav>
-				<?php include ("botonera.php"); ?>
+				<?php include("botonera.php"); ?>
 			</nav>
 		</header>
 		<section>
 			<h2>Imágenes con PHP</h2>
 
-			<strong><h3 style="text-align: center; color:blue;">Marca de agua</h3></strong>
-	
+			<strong>
+				<h3 style="text-align: center; color:blue;">Marca de agua</h3>
+			</strong>
+
 			<img src="marca_de_agua.php" alt="Marca de agua" style="width: 250px;">
 
 
-			
 
-			
+
+
 		</section>
 
 		<aside>
-			<strong><h3 style="text-align: center; color:red;">Thumbnail</h3></strong>
+			<strong>
+				<h3 style="text-align: center; color:red;">Thumbnail</h3>
+			</strong>
 
-<?php include("thumbnail.php") ?>	
+			<?php //include("thumbnail.php") ?>
 
-<img src="imagenes/auto_thumb.jpg" alt="Auto" style="display: block; margin: 0 auto">
+			<a href="imagenes/auto_thumb.jpg" data-lightbox="image-1"><img src="imagenes/auto_thumb.jpg" alt="Auto" style="display: block; margin: 50 auto ; width: 150px; height:150px;"></a>
 
 
 		</aside>
