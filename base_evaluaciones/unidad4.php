@@ -39,13 +39,15 @@
 				<h3 style="text-align: center; color:red;">Thumbnail</h3>
 			</strong>
 
-			<?php //include("thumbnail.php") ?>
+			<?php //include("thumbnail.php") 
+			?>
 
 			<a href="imagenes/auto_thumb.jpg" data-lightbox="image-1"><img src="imagenes/auto_thumb.jpg" alt="Auto" style="display: block; margin: 50 auto ; width: 150px; height:150px;"></a>
 
 
 		</aside>
 		<footer>
+			<script src="js/lightbox-plus-jquery.js"></script>
 			<a href="https://site.elearning-total.com/courses/?com=lb">Programación en PHP y MySQL - Nivel Avanzado</a>
 		</footer>
 

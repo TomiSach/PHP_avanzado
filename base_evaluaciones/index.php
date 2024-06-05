@@ -5,7 +5,6 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<link rel="stylesheet" href="estilos.css">
-	<link href="path/to/lightbox.min.css" rel="stylesheet" />
 </head>
 
 <body>
@@ -46,7 +45,7 @@
 		<footer>
 			<a href="https://site.elearning-total.com/courses/?com=lb">Programación en PHP y MySQL - Nivel Avanzado</a>
 		</footer>
-		<script src="path/to/lightbox.js"></script>
+		
 
 	</div>
 </body>
