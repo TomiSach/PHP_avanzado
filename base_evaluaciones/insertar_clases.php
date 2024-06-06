@@ -1,5 +1,4 @@
 <?php
-//session_start();
 
 $clase = $_POST["clase"];
 
