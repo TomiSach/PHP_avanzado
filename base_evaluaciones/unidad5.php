@@ -46,7 +46,7 @@ session_start();
 				<input type="email" id="mail" name="mail" required>
 				<br><br>
 				<label for="consulta">Consulta:</label>
-				<input type="text" id="consulta" name="consulta" required>
+				<textarea type="text" id="consulta" name="consulta" required></textarea>
 				<br><br>
 				<img src="imagen_captcha.php" alt="CAPTCHA">
 				<br><br>
@@ -56,7 +56,10 @@ session_start();
 				<input type="submit" value="Enviar">
 			</form>
 
-			<?php
+			
+		</section>
+		<aside>
+		<?php
 			if (isset($_GET['error'])) {
 				echo "<p>Codigo CAPTCHA ingresado incorrectamente<p>";
 			}else{
@@ -64,8 +67,6 @@ session_start();
 			}
 
 			?>
-		</section>
-		<aside>
 		</aside>
 		<footer>
 			<a href="https://site.elearning-total.com/courses/?com=lb">Programación en PHP y MySQL - Nivel Avanzado</a>
