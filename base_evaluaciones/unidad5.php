@@ -9,6 +9,7 @@ session_start();
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<link rel="stylesheet" href="estilos.css">
 	<title>Consultas</title>
+	<script src="https://www.google.com/recaptcha/api.js" async defer></script>
 </head>
 
 <body>
@@ -56,21 +57,38 @@ session_start();
 				<input type="submit" value="Enviar">
 			</form>
 
-			
+
+
 		</section>
 		<aside>
-		<?php
+			<?php
 			if (isset($_GET['error'])) {
 				echo "<p>Codigo CAPTCHA ingresado incorrectamente<p>";
-			}else{
+			} else {
 				echo "<p>Formulario enviado correctamente</p>";
 			}
-
 			?>
+			<!--
+
+			RECAPTCHA CREADO CON GOOGLE
+			
+			<form action="cargar.php" method="POST">
+				<label for="nombre">Usuario:</label>
+				<input type="text" id="nombre" name="nombre" required>
+				<br><br>
+				<label for="apellido">Constraseña:</label>
+				<input type="text" id="apellido" name="apellido" required>
+				<div class="g-recaptcha" data-sitekey="6LeUUPQpAAAAAEE4KYUOmLfxQ6JsSIfgXCGEZz9Y"></div>
+				<br />
+				<input type="submit" value="Enviar">
+				<br><br>
+			</form>
+		-->
 		</aside>
 		<footer>
 			<a href="https://site.elearning-total.com/courses/?com=lb">Programación en PHP y MySQL - Nivel Avanzado</a>
 		</footer>
+
 	</div>
 </body>
 
