@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 08-06-2024 a las 23:51:07
+-- Tiempo de generación: 26-06-2024 a las 00:30:28
 -- Versión del servidor: 10.4.32-MariaDB
 -- Versión de PHP: 8.2.12
 
@@ -48,6 +48,28 @@ INSERT INTO `clases` (`id`, `unidad`, `fecha`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Estructura de tabla para la tabla `compras`
+--
+
+CREATE TABLE `compras` (
+  `id_compra` int(5) NOT NULL,
+  `codigo` int(10) NOT NULL,
+  `producto` varchar(30) NOT NULL,
+  `descripcion` varchar(255) NOT NULL,
+  `precio` decimal(5,2) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Volcado de datos para la tabla `compras`
+--
+
+INSERT INTO `compras` (`id_compra`, `codigo`, `producto`, `descripcion`, `precio`) VALUES
+(29, 2, 'Playstation 5 1Tb', 'La mejor consola disponible en el mercado', 20.00),
+(30, 3, 'Notebool DELL G3', 'Notebook potente', 30.00);
+
+-- --------------------------------------------------------
+
+--
 -- Estructura de tabla para la tabla `consulta`
 --
 
@@ -77,6 +99,12 @@ ALTER TABLE `clases`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indices de la tabla `compras`
+--
+ALTER TABLE `compras`
+  ADD PRIMARY KEY (`id_compra`);
+
+--
 -- AUTO_INCREMENT de las tablas volcadas
 --
 
@@ -85,6 +113,12 @@ ALTER TABLE `clases`
 --
 ALTER TABLE `clases`
   MODIFY `id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+
+--
+-- AUTO_INCREMENT de la tabla `compras`
+--
+ALTER TABLE `compras`
+  MODIFY `id_compra` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
