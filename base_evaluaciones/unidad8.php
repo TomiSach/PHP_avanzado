@@ -19,49 +19,42 @@
 				</nav>
 			</header>
 			<section>
-				<h2>Registro</h2>
-				<form action="cargarusuario.php" method="POST">
+				<h2>Registro de Usuario</h2>
+				<form action="cargarusuario.php" method="post">
 					<label for="email">Email:</label>
-					<input type="text" id="email" name="email" required>
-					<br><br>
-					<label for="contrasenia">Contraseña:</label>
-					<input type="text" id="clave" name="clave" required>
-					<br><br>
-					<input type="submit" value="Registrar">
-				</form>
-				<p>
-					<?php
-
-					if (isset($_GET['reg_ok'])) {
-						echo '<p>Resgistrado exitosamente</p>';
-					}
-					?>
-				</p>
-				<h2>Ingresar</h2>
-				<form action="ingreso.php" method="POST">
-					<label for="email">Email:</label>
-					<input type="text" id="email" name="email" required>
-					<br><br>
+					<input type="email" name="email" id="email" required>
+					<br>
 					<label for="clave">Contraseña:</label>
-					<input type="text" id="clave" name="clave" required>
-					<br><br>
-					<input type="submit" value="Ingresar">
+					<input type="password" name="clave" id="clave" required>
+					<br>
+					<button type="submit">Registrar</button>
 				</form>
+				<?php
+				if (isset($_GET['reg_ok'])) {
+					echo "<p>Registro exitoso!</p>";
+				}
+
+				?>
+
+				<h2>Ingreso de Usuario</h2>
+				<form action="verificarusuario.php" method="post">
+					<label for="email">Email:</label>
+					<input type="email" name="email" id="email" required>
+					<br>
+					<label for="clave">Contraseña:</label>
+					<input type="password" name="clave" id="clave" required>
+					<br>
+					<button type="submit">Ingresar</button>
+				</form>
+				<?php
+				if (isset($_GET['acc_ok'])) {
+					echo "<p>Ingreso exitoso!</p>";
+				} elseif (isset($_GET['acc_error'])) {
+					echo "<p>Ingreso fallido</p>";
+				}
+				?>
+
 			</section>
-			<p>
-				<?php
-
-				if (isset($_GET['pass_ok'])) {
-					echo '<p>Ingresado exitosamente</p>';
-				}
-				?>
-				<?php
-
-				if (isset($_GET['pass_error'])) {
-					echo '<p>Error al ingesar</p>';
-				}
-				?>
-			</p>
 			<aside>
 
 			</aside>
